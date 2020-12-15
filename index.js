@@ -30,9 +30,6 @@ let persons = [
       }
 ]
 
-app.get('/', (req, res) => {
-  res.send('<h1>The phone book</h1>')
-})
 app.get('/info', (req, res) => {
     const info = `<p>Phonebook has info for ${persons.length} people</p><p>${new Date()}</p>`
     
@@ -119,6 +116,8 @@ app.get('/api/persons/:id', (req, res) => {
     res.status(204).end()
       
   })
+
+  app.use(express.static('build'))
 
   const PORT = process.env.PORT || 3001
   app.listen(PORT, () => {
