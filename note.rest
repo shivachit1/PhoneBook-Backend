@@ -8,3 +8,12 @@ content-type: application/json
     "name": "harli",
     "number": "8989787878787"
 }
+
+###
+PUT http://localhost:3001/api/persons/5fdaffd245aa4e6de65bb30c
+content-type: application/json
+
+{
+    "name": "shiva",
+    "number": "89897asdasd878787ff8asdasd7"
+}
